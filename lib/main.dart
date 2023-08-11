@@ -1,13 +1,15 @@
-import 'package:anotei/app/modules/login/presenter/login_page.dart';
+import 'package:anotei/app/modules/register/presenter/register_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'app/modules/login/presenter/login_controller.dart';
+import 'app/modules/register/presenter/register_page.dart';
 
 void main() {
   runApp((MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => LoginController()),
+      ChangeNotifierProvider(create: (_) => RegisterController()),
     ],
     child: const App(),
   )));
@@ -22,7 +24,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'aNotei',
-      home: LoginPage(),
+      home: RegisterPage(),
     );
   }
 }
