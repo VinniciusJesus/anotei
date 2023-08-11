@@ -19,22 +19,22 @@ class RegisterPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 50),
-              // const Icon(
-              //   Icons.task_alt,
-              //   size: 100,
-              //   color: Color(0xFFD9ACF5),
-              // ),
-              // const SizedBox(height: 20),
+              const SizedBox(height: 20),
+              const Icon(
+                Icons.task_alt,
+                size: 100,
+                color: Color(0xFFD9ACF5),
+              ),
+              const SizedBox(height: 20),
               Text(
-                'Crie a sua conta para comecar\n =)',
+                'Crie a sua conta\n =)',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.grey[700],
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 70),
+              const SizedBox(height: 50),
               TextFieldWidget(
                 controller: _controller.emailEC,
                 hintText: 'Nome',
