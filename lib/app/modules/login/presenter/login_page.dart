@@ -22,31 +22,32 @@ class LoginPage extends StatelessWidget {
             children: [
               const SizedBox(height: 50),
               const Icon(
-                Icons.pending,
+                Icons.task_alt,
                 size: 100,
                 color: Color(0xFFD9ACF5),
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 20),
               Text(
-                'Bem vindo ao aNotei!',
+                'Bem vindo ao Anotei\n =)',
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.grey[700],
-                  fontSize: 25,
-                ),
+                    color: Colors.grey[700],
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 70),
               TextFieldWidget(
                 controller: _controller.emailEC,
-                hintText: 'Username',
+                hintText: 'Email',
                 obscureText: false,
               ),
               const SizedBox(height: 10),
               TextFieldWidget(
                 controller: _controller.passwordEC,
-                hintText: 'Password',
+                hintText: 'Senha',
                 obscureText: true,
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 35),
               ButtonWidget(
                 onTap: () {},
                 text: 'Entrar',
