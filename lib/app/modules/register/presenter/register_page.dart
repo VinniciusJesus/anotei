@@ -55,7 +55,7 @@ class RegisterPage extends StatelessWidget {
               const SizedBox(height: 35),
               ButtonWidget(
                 onTap: () {},
-                text: 'Entrar',
+                text: 'Criar',
               ),
             ],
           ),
