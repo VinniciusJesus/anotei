@@ -16,48 +16,50 @@ class RegisterPage extends StatelessWidget {
       backgroundColor: Color(0xFFFFCEFE),
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(height: 20),
-              const Icon(
-                Icons.task_alt,
-                size: 100,
-                color: Color(0xFFD9ACF5),
-              ),
-              const SizedBox(height: 20),
-              Text(
-                'Crie a sua conta\n =)',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Colors.grey[700],
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 50),
-              TextFieldWidget(
-                controller: _controller.emailEC,
-                hintText: 'Nome',
-                obscureText: false,
-              ),
-              const SizedBox(height: 10),
-              TextFieldWidget(
-                controller: _controller.emailEC,
-                hintText: 'Email',
-                obscureText: false,
-              ),
-              const SizedBox(height: 10),
-              TextFieldWidget(
-                controller: _controller.passwordEC,
-                hintText: 'Senha',
-                obscureText: true,
-              ),
-              const SizedBox(height: 35),
-              ButtonWidget(
-                onTap: () {},
-                text: 'Criar',
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 20),
+                const Icon(
+                  Icons.task_alt,
+                  size: 100,
+                  color: Color(0xFFD9ACF5),
+                ),
+                const SizedBox(height: 20),
+                Text(
+                  'Crie a sua conta\n =)',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.grey[700],
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 50),
+                TextFieldWidget(
+                  controller: _controller.emailEC,
+                  hintText: 'Nome',
+                  obscureText: false,
+                ),
+                const SizedBox(height: 10),
+                TextFieldWidget(
+                  controller: _controller.emailEC,
+                  hintText: 'Email',
+                  obscureText: false,
+                ),
+                const SizedBox(height: 10),
+                TextFieldWidget(
+                  controller: _controller.passwordEC,
+                  hintText: 'Senha',
+                  obscureText: true,
+                ),
+                const SizedBox(height: 35),
+                ButtonWidget(
+                  onTap: () {},
+                  text: 'Criar',
+                ),
+              ],
+            ),
           ),
         ),
       ),
