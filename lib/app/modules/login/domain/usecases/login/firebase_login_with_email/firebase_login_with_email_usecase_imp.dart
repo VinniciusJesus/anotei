@@ -1,34 +1,33 @@
+import 'package:anotei/core/save_local_user/save_local_user_usecase_imp.dart';
+import 'package:anotei/core/strings.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 
 import '../../../model/login_model.dart';
 import '../firebase_get_user/firebase_get_user_usecase_imp.dart';
 import '../firebase_login_errors/firebase_login_errors_usecase_imp.dart';
-import 'firebase_login_with_email_usecase.dart';
 
-class FirebaseLoginWithEmailUsecaseImp
-    implements FirebaseLoginWithEmailUsecase {
+class FirebaseLoginWithEmailUsecaseImp {
   final _firebaseInstance = FirebaseAuth.instance;
 
-  @override
-  Future<String?> call(LoginModel LoginModel) async {
+  
+  Future<void> call(LoginModel loginModel) async {
     final prefs = await SharedPreferences.getInstance();
 
     try {
       final authentication = await _firebaseInstance.signInWithEmailAndPassword(
-          email: LoginModel.email, password: LoginModel.password);
+          email: loginModel.email, password: loginModel.password);
 
       await SaveLocalUserUsecaseImp().call(
-        LoggedModel: await FirebaseGetUserUsecaseImp()
+        loggedEntity: await FirebaseGetUserUsecaseImp()
             .call(userID: authentication.user!.uid),
       );
-      await prefs.setBool(LocalConstantsKeys.haveLogin, true);
+      await prefs.setBool(Strings.haveLogin, true);
 
       // Get.offAllNamed(Routes.TWITTER_TRENDS);
-      return "200";
+      return;
     } on FirebaseAuthException catch (e) {
-      return FirebaseLoginErrorsUsecaseImp().call(errorCode: e.code);
+      FirebaseLoginErrorsUsecaseImp().call(errorCode: e.code);
     }
   }
 }
