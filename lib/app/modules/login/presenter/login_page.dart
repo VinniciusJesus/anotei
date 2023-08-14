@@ -1,6 +1,8 @@
 import 'package:anotei/app/components/button_widget.dart';
 import 'package:anotei/app/components/text_field_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart' show Modular;
+
 import 'package:provider/provider.dart';
 
 import 'login_controller.dart';
@@ -54,6 +56,21 @@ class LoginPage extends StatelessWidget {
                 },
                 text: 'Entrar',
               ),
+              const SizedBox(height: 45),
+              TextButton(
+                onPressed: () {
+                  Modular.to.pushNamed(
+                    "/register",
+                  );
+                },
+                child: Text(
+                  "Criar conta",
+                  style: TextStyle(
+                      color: Colors.grey[700],
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+              )
             ],
           ),
         ),

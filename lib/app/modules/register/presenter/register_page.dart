@@ -37,7 +37,7 @@ class RegisterPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 50),
                 TextFieldWidget(
-                  controller: _controller.emailEC,
+                  controller: _controller.nameEC,
                   hintText: 'Nome',
                   obscureText: false,
                 ),
@@ -55,7 +55,9 @@ class RegisterPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 35),
                 ButtonWidget(
-                  onTap: () {},
+                  onTap: () {
+                    _controller.register();
+                  },
                   text: 'Criar',
                 ),
               ],

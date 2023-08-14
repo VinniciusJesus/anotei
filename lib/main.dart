@@ -3,6 +3,7 @@ import 'package:anotei/core/modular/app_module.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:one_context/one_context.dart';
 import 'package:provider/provider.dart';
 
 import 'app/modules/login/presenter/login_controller.dart';
@@ -26,10 +27,15 @@ class App extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      title: 'Anotei',
       debugShowCheckedModeBanner: false,
-      title: 'aNotei',
-      home: RegisterPage(),
+      builder: OneContext().builder,
+      routeInformationParser: Modular.routeInformationParser,
+      routerDelegate: Modular.routerDelegate,
     );
+
+    
+
   }
 }

@@ -12,7 +12,7 @@ class FirebaseRegisterWithEmailUsecaseImp {
   final _firebaseInstance = FirebaseAuth.instance;
   final _firestoreInstance = FirebaseFirestore.instance;
 
-  Future<void> call({required RegisterModel registerModel}) async {
+  Future<String> call({required RegisterModel registerModel}) async {
     final prefs = await SharedPreferences.getInstance();
 
     try {
@@ -36,9 +36,9 @@ class FirebaseRegisterWithEmailUsecaseImp {
       await SaveLocalUserUsecaseImp().call(loggedEntity: _loggedUser);
       await prefs.setBool(Strings.haveLogin, true);
 
-      return;
+      return "200";
     } on FirebaseAuthException catch (e) {
-      FirebaseRegisterErrorUsecaseImp().call(errorCode: e.code);
+      return FirebaseRegisterErrorUsecaseImp().call(errorCode: e.code);
     }
   }
 }
