@@ -1,8 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../../../core/constants/local_constants_keys.dart';
-import '../../../../../core/features/save_local_user/save_local_user_usecase_imp.dart';
+
 import '../../../model/login_model.dart';
 import '../firebase_get_user/firebase_get_user_usecase_imp.dart';
 import '../firebase_login_errors/firebase_login_errors_usecase_imp.dart';
