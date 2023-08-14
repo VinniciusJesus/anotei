@@ -10,8 +10,7 @@ import '../firebase_login_errors/firebase_login_errors_usecase_imp.dart';
 class FirebaseLoginWithEmailUsecaseImp {
   final _firebaseInstance = FirebaseAuth.instance;
 
-  
-  Future<void> call(LoginModel loginModel) async {
+  Future<String> call(LoginModel loginModel) async {
     final prefs = await SharedPreferences.getInstance();
 
     try {
@@ -25,9 +24,9 @@ class FirebaseLoginWithEmailUsecaseImp {
       await prefs.setBool(Strings.haveLogin, true);
 
       // Get.offAllNamed(Routes.TWITTER_TRENDS);
-      return;
+      return "200";
     } on FirebaseAuthException catch (e) {
-      FirebaseLoginErrorsUsecaseImp().call(errorCode: e.code);
+      return FirebaseLoginErrorsUsecaseImp().call(errorCode: e.code);
     }
   }
 }

@@ -1,6 +1,8 @@
 import 'package:anotei/app/modules/register/presenter/register_controller.dart';
+import 'package:anotei/core/modular/app_module.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:provider/provider.dart';
 
 import 'app/modules/login/presenter/login_controller.dart';
@@ -14,7 +16,7 @@ void main() async {
       ChangeNotifierProvider(create: (_) => LoginController()),
       ChangeNotifierProvider(create: (_) => RegisterController()),
     ],
-    child: const App(),
+    child: ModularApp(module: AppModule(), child: App()),
   )));
 }
 
