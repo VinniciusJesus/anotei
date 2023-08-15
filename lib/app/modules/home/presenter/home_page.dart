@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -41,9 +42,19 @@ class HomePage extends StatelessWidget {
         child: ListView.builder(
           itemCount: 1,
           itemBuilder: (BuildContext context, int index) {
-            return Dismissible(
+            return Slidable(
               key: UniqueKey(),
-              onDismissed: (direction) {},
+              endActionPane: ActionPane(
+                motion: StretchMotion(),
+                children: [
+                  SlidableAction(
+                    icon: Icons.delete,
+                    backgroundColor: Colors.red.shade300,
+                    borderRadius: BorderRadius.circular(12),
+                    onPressed: (BuildContext context) {},
+                  )
+                ],
+              ),
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
