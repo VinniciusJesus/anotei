@@ -4,13 +4,16 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+# anotei
+Bem-vindo ao repositório do Aplicativo de Lista de Tarefas Avançado! Este projeto foi desenvolvido com paixão e dedicação para fornecer uma solução de organização e produtividade de alta qualidade para o seu dia a dia.
 
-A few resources to get you started if this is your first Flutter project:
+##Recursos Destacados
+Adicione e exclua tarefas de forma intuitiva.
+Pesquise dentre as suas tarefas
+Interface elegante e amigável que torna a gestão de tarefas uma experiência agradável.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+##Tecnologias Utilizadas
+Este aplicativo foi desenvolvido utilizando a poderosa estrutura Flutter, permitindo uma experiência de usuário perfeita em dispositivos Android e iOS. Além disso, foi integrado com o sistema de autenticação e armazenamento do Firebase.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##Como Contribuir
+Se você deseja contribuir para este projeto, ficaremos encantados em receber sua ajuda! Sinta-se à vontade para explorar as issues abertas e enviar pull requests. Sua contribuição pode variar desde correções de bugs, melhorias na interface de usuário até a adição de novos recursos.
