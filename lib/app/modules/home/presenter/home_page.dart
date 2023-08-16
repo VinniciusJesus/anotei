@@ -98,7 +98,9 @@ class HomePage extends StatelessWidget {
                                 icon: Icons.delete,
                                 backgroundColor: Colors.red.shade300,
                                 borderRadius: BorderRadius.circular(12),
-                                onPressed: (BuildContext context) {},
+                                onPressed: (BuildContext context) {
+                                  _controller.remove(item.id);
+                                },
                               )
                             ],
                           ),

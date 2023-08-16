@@ -12,6 +12,11 @@ class HomeController extends ChangeNotifier {
   final _firestore = FirebaseFirestore.instance;
 
   final titleEC = TextEditingController();
+  final EC = TextEditingController();
+
+  void search() {
+
+  }
 
   Future<void> get() async {
     list.clear();
@@ -26,7 +31,6 @@ class HomeController extends ChangeNotifier {
       },
     );
 
-    list;
     notifyListeners();
   }
 
@@ -40,6 +44,7 @@ class HomeController extends ChangeNotifier {
   }
 
   Future<void> remove(String id) async {
-    await _firestore.collection("lista").doc(id);
+    await _firestore.collection("lista").doc(id).delete();
+    await get();
   }
 }
