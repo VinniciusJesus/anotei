@@ -1,3 +1,4 @@
+import 'package:anotei/app/modules/home/presenter/home_controller.dart';
 import 'package:anotei/app/modules/register/presenter/register_controller.dart';
 import 'package:anotei/core/modular/app_module.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -14,6 +15,7 @@ void main() async {
   await Firebase.initializeApp();
   runApp((MultiProvider(
     providers: [
+      ChangeNotifierProvider(create: (_) => HomeController()),
       ChangeNotifierProvider(create: (_) => LoginController()),
       ChangeNotifierProvider(create: (_) => RegisterController()),
     ],
@@ -34,8 +36,5 @@ class App extends StatelessWidget {
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
     );
-
-    
-
   }
 }

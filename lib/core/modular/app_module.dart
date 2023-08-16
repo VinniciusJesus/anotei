@@ -12,7 +12,7 @@ class AppModule extends Module {
 
   @override
   void routes(r) {
-    r.child('/', child: (_) => LoginPage());
+    r.child('/', child: (_) => HomePage());
     r.child('/register', child: (_) => RegisterPage());
     r.child('/home', child: (_) => HomePage());
   }
