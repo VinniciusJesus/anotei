@@ -2,9 +2,7 @@
 # anotei
 Bem-vindo ao repositório do Aplicativo de Lista de Tarefas Avançado! Este projeto foi desenvolvido com paixão e dedicação para fornecer uma solução de organização e produtividade de alta qualidade para o seu dia a dia.
 
-![WhatsApp Image 2023-08-16 at 14 11 40](https://github.com/VinniciusJesus/anotei/assets/57817746/15ca9d82-062e-4ddd-8453-3ed8c6d94d82)
-![WhatsApp Image 2023-08-16 at 14 11 39 (1)](https://github.com/VinniciusJesus/anotei/assets/57817746/33034455-cbbd-45b4-80db-20bb3d818f32)
-![WhatsApp Image 2023-08-16 at 14 11 39](https://github.com/VinniciusJesus/anotei/assets/57817746/0f5c06af-1e6b-4b13-8f1e-89c19495d52c)
+![Sem título](https://github.com/mitchkoko/ModernSmartHomeUI/assets/57817746/a244c7fa-961e-40e2-bfad-b773ba44f0e8)
 
 
 
